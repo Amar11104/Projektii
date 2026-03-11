@@ -1,32 +1,23 @@
 <?php
-/*
-Template Name: Contact
-*/
+/* Template Name: Contact */
 get_header();
 ?>
 
-<section class="section">
+<section class="container">
 
-<div class="container">
+<h1>Contact Us</h1>
 
-<h1 class="section-title">Contact Us</h1>
+<form>
 
-<form class="contact-form">
+<input type="text" placeholder="Your Name">
 
-<input type="text" placeholder="Name" required>
-
-<input type="email" placeholder="Email" required>
+<input type="email" placeholder="Your Email">
 
 <textarea placeholder="Message"></textarea>
 
-<button class="btn">Send Message</button>
+<button>Send</button>
 
 </form>
-
-<p>Email: info@grandhotel.com</p>
-<p>Phone: +383 44 000 000</p>
-
-</div>
 
 </section>
 

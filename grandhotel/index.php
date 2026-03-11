@@ -2,20 +2,29 @@
 
 <section class="container">
 
-<h2>Latest News</h2>
+<h1>Blog</h1>
 
-<?php
-if(have_posts()):
-while(have_posts()): the_post();
-?>
+<?php if(have_posts()): ?>
 
-<h3><?php the_title(); ?></h3>
-<?php the_excerpt(); ?>
+<?php while(have_posts()): the_post(); ?>
 
-<?php
-endwhile;
-endif;
-?>
+<h2>
+
+<a href="<?php the_permalink();?>">
+
+<?php the_title();?>
+
+</a>
+
+</h2>
+
+<?php the_excerpt();?>
+
+<?php endwhile; ?>
+
+<?php the_posts_pagination(); ?>
+
+<?php endif; ?>
 
 </section>
 

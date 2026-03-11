@@ -1,46 +1,47 @@
 <?php get_header(); ?>
 
-<section class="hero">
+<div class="hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/hero.jpg')">
 
-<div class="hero-content">
-
-<h1>Luxury Stay Experience</h1>
-
-<p>Book your dream vacation today</p>
-
-<a class="btn" href="/booking">Book Now</a>
+Luxury Hotel
 
 </div>
 
-</section>
+<section class="container">
 
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">Our Rooms</h2>
+<h2>Our Rooms</h2>
 
 <div class="rooms-grid">
 
-<div class="room">
-<h3>Standard Room</h3>
-<p>$120 / night</p>
-<a href="/booking" class="btn">Book</a>
+<?php
+
+$query = new WP_Query(array(
+'post_type'=>'rooms',
+'posts_per_page'=>3
+));
+
+while($query->have_posts()){
+
+$query->the_post();
+
+?>
+
+<div class="room-card">
+
+<?php the_post_thumbnail(); ?>
+
+<h3><?php the_title();?></h3>
+
+<?php the_excerpt();?>
+
+<a href="<?php the_permalink();?>">View Room</a>
+
 </div>
 
-<div class="room">
-<h3>Deluxe Room</h3>
-<p>$180 / night</p>
-<a href="/booking" class="btn">Book</a>
-</div>
+<?php }
 
-<div class="room">
-<h3>Presidential Suite</h3>
-<p>$350 / night</p>
-<a href="/booking" class="btn">Book</a>
-</div>
+wp_reset_postdata();
 
-</div>
+?>
 
 </div>
 

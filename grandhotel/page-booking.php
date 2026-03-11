@@ -1,35 +1,27 @@
 <?php
-/*
-Template Name: Booking
-*/
+/* Template Name: Booking */
 get_header();
 ?>
 
-<section class="section">
+<section class="container">
 
-<div class="container">
+<h1>Book a Room</h1>
 
-<h1 class="section-title">Book Your Stay</h1>
+<form>
 
-<form class="booking-form">
+<input type="text" placeholder="Full Name">
 
-<input type="text" placeholder="Full Name" required>
-
-<input type="email" placeholder="Email" required>
+<input type="email" placeholder="Email">
 
 <label>Check In</label>
-<input type="date" required>
+<input type="date">
 
 <label>Check Out</label>
-<input type="date" required>
+<input type="date">
 
-<input type="number" placeholder="Guests">
-
-<button class="btn">Reserve Room</button>
+<button>Book Now</button>
 
 </form>
-
-</div>
 
 </section>
 

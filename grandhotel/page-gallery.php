@@ -1,26 +1,21 @@
 <?php
-/*
-Template Name: Gallery
-*/
+/* Template Name: Gallery */
 get_header();
 ?>
 
-<section class="section">
+<section class="container">
 
-<div class="container">
-
-<h1 class="section-title">Gallery</h1>
+<h1>Gallery</h1>
 
 <div class="gallery">
 
-<img src="https://picsum.photos/400/300?1">
-<img src="https://picsum.photos/400/300?2">
-<img src="https://picsum.photos/400/300?3">
-<img src="https://picsum.photos/400/300?4">
-<img src="https://picsum.photos/400/300?5">
-<img src="https://picsum.photos/400/300?6">
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery1.jpg">
 
-</div>
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery2.jpg">
+
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/room1.jpg">
+
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/room2.jpg">
 
 </div>
 

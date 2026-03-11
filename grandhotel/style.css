@@ -1,8 +1,101 @@
 /*
-Theme Name: Grand Hotel Pro
-Author: Your Name
-Description: Professional Hotel WordPress Theme
+Theme Name: GrandHotel Ultimate
+Author: Developer
 Version: 1.0
+Description: Ultimate Hotel WordPress Theme
 */
 
-@import url("assets/css/main.css");
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+.container{
+width:1200px;
+margin:auto;
+}
+
+header{
+background:#111;
+color:white;
+padding:20px;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:600px;
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:60px;
+font-weight:bold;
+}
+
+.rooms-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:40px;
+}
+
+.room-card{
+background:white;
+padding:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.room-card img{
+width:100%;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:400px;
+}
+
+input,textarea{
+padding:10px;
+}
+
+button{
+background:#c59d5f;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:40px;
+margin-top:50px;
+}

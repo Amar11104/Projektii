@@ -1,61 +1,43 @@
 <?php
-/*
-Template Name: Rooms
-*/
+/* Template Name: Rooms */
 get_header();
 ?>
 
-<section class="section">
+<section class="container">
 
-<div class="container">
-
-<h1 class="section-title">Rooms & Suites</h1>
+<h1>Rooms</h1>
 
 <div class="rooms-grid">
 
-<div class="room">
+<?php
 
-<h3>Standard Room</h3>
+$query = new WP_Query(array(
+'post_type' => 'rooms'
+));
 
-<p>
-Comfortable room with WiFi, TV, and queen bed.
-</p>
+while($query->have_posts()) {
 
-<p class="price">$120 / night</p>
+$query->the_post();
 
-<a class="btn" href="/booking">Book Now</a>
+?>
 
-</div>
+<div class="room-card">
 
-<div class="room">
+<?php the_post_thumbnail(); ?>
 
-<h3>Deluxe Room</h3>
+<h3><?php the_title(); ?></h3>
 
-<p>
-Luxury room with balcony and city view.
-</p>
+<?php the_excerpt(); ?>
 
-<p class="price">$180 / night</p>
-
-<a class="btn" href="/booking">Book Now</a>
+<a href="<?php the_permalink(); ?>">View Room</a>
 
 </div>
 
-<div class="room">
+<?php }
 
-<h3>Presidential Suite</h3>
+wp_reset_postdata();
 
-<p>
-Premium luxury suite with living room.
-</p>
-
-<p class="price">$350 / night</p>
-
-<a class="btn" href="/booking">Book Now</a>
-
-</div>
-
-</div>
+?>
 
 </div>
 
