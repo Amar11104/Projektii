@@ -69,4 +69,20 @@ register_post_type('rooms',array(
 
 }
 
-add_action('init','grandhotel_rooms');
+// function grandhotel_scripts(){
+
+// wp_enqueue_script(
+// 'rooms-js',
+// get_template_directory_uri().'/assets/js/rooms.js',
+// array(),
+// null,
+// true
+// );
+
+// wp_localize_script('rooms-js','themePath',array(
+// 'url'=>get_template_directory_uri()
+// ));
+
+// }
+
+ add_action('init','grandhotel_rooms');
